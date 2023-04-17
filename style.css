@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --tasa-humo-marron: #CA6413;
+    --tasa-contenido-latera: #954415;
+    --white: #FFFFFF;
+    --letras-color: #3F140C;
+    --granos-cafe: #6B2B0E;
+    --black: #000000;
+    --text-size: 2rem;
+    --text-size-2: 1.5rem;
+}
+header{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid red 1px;
+}
+header .header-cafe-span{
+    display: inline-block;
+    background-image: url(./assets/icons/header-span-tasa-cafe.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+header span{
+    letter-spacing: 0.5rem;
+}
+header h1{
+    font-family: 'Mrs Saint Delafield';
+    font-size: 10rem;
+}
+/*main*/
+/*seccion 1*/
+.main-secciton-1{
+    padding: 10px 30px;
+    display: flex;
+}
+.main-secciton-1 p{
+    text-align: justify;
+    position: relative;
+    left: 10px;
+    top: 50px;
+    font-size: var(--text-size);
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+main section .main-secciton-1-left-img{
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    position: relative;
+}
+main section:nth-child(odd){
+    background-color: var(--tasa-contenido-latera);
+}
+main section:nth-child(even){
+    background-color: var(--white);
+}
+/*fin seccion 1*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin-top: 20px;
+}
+.product-card {
+    width: 240px;
+}
+.product-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-card .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.product-card .product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+.product-card .product-info div p:nth-child(1) {
+    font-size: var(--text-size-2);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.product-card .product-info div p:nth-child(2) {
+    font-size: var(--text-size);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/*mediaq*/
+@media screen and (min-width: 425px) and (max-width: 1444px) {
+    
+}
+@media (min-width: 425px) and (max-width: 657px){
+    .main-secciton-1{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow: scroll;
+    }
+    .main-secciton-1-left-img{
+        margin-top: 15px;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+    }
+    .main-secciton-1 p {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        text-align: justify;
+        font-size: var(--text-size);
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+    }
+}
